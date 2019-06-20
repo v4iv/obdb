@@ -1,0 +1,23 @@
+service: ildb
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  region: us-west-2
+  stage: dev
+  profile: vaibhav
+
+functions:
+  server:
+    handler: app.server
+    cors: true
+    events:
+      - http: ANY /
+      - http: 'ANY {proxy+}'
+
+plugins:
+  - serverless-offline
+
+custom:
+  serverless-offline:
+    port: 8000

@@ -1,0 +1,37 @@
+{
+  "name": "obdb",
+  "version": "1.0.0",
+  "description": "Open Books Database",
+  "main": "index.js",
+  "scripts": {
+    "start": "sls offline start",
+    "debug": "export SLS_DEBUG=* && sls offline start",
+    "clean": "rm -rf .build/",
+    "deploy": "sls deploy"
+  },
+  "keywords": [],
+  "author": "Vaibhav Sharma",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^3.0.1",
+    "bcrypt-nodejs": "^0.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "joi": "^14.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.11",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "pg": "^7.11.0",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.8.10",
+    "serverless-http": "^2.0.2",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "debug": "^4.1.1",
+    "morgan": "^1.9.1",
+    "serverless-offline": "^5.3.3"
+  }
+}
